@@ -3,12 +3,12 @@ import { FTX_API, FTX_SECRET, SUBACCOUNT, RISK } from "../config.js";
 
 // initialisation des clients
 export const clientWS = new WebsocketClient({
-	key: FTX_SECRET,
-	secret: FTX_API,
+	key: FTX_API,
+	secret: FTX_SECRET,
 	subAccountName: SUBACCOUNT,
 });
 
-const client = new RestClient(FTX_SECRET, FTX_API, {subAccountName: 'reci'})
+const client = new RestClient(FTX_API, FTX_SECRET, {subAccountName: 'MAINBOT'})
 
 export async function getUSDBalance() {
 	let response = await client.getBalances();

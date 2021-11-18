@@ -41,17 +41,26 @@ export function hashOrder(order) {
 */
 
 function getStopLossPrice(value) {
+	if(value[0] === "1" && value.length > 1) {
+		return +value[1]
+	}
 	return +value[0]
 }
 
 function getTakeProfitPrice(value) {
-	if((/k/gm).test(value[0])) {
-		value[0] = value[0].replace("k", "000")
+	// if((/k/gm).test(value[0])) {
+	// 	value[0] = value[0].replace("k", "000")
+	// }
+	if(value[0] === "1" && value.length > 1) {
+		return +value[1]
 	}
 	return +value[0]
 }
 
 function getPrice(value) {
+	if(value[0] === '1' && value.length > 1) {
+		return +value[1]
+	}
 	return +value[0]
 }
 
