@@ -1,0 +1,17 @@
+[Features]
+- interpret 'k' as thousand value
+- detect if post is limit or market 
+
+
+[Features to add]
+- short position
+- cents interpretation
+
+
+[What is this ?]
+This programm aim to scrap post from the discord channel to automate the trade 
+on the FTX exchange.
+
+[Dev]
+dromaz
+
